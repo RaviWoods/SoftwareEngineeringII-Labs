@@ -2,8 +2,25 @@
 #include <string>
 #include <sstream>
 #include <math.h>
+#include <cmath>
 #include "point.hpp"
 using namespace std;
+
+bool point::operator<(const point& p2) {
+	if (abs(r) < abs(p2.get_r())) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+bool point::operator==(const point& p2) {
+	if ((y == p2.y) && (x == p2.x)) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 void point::set_x(double x_in) {
 	x = x_in;
@@ -21,9 +38,9 @@ void point::set_r() {
 	r = sqrt(pow(x,2) + pow(y,2));
 }
 
-double point::get_x() { return x; }
-double point::get_y() { return y; }
-double point::get_r() { return r; }
+double point::get_x() const { return x; }
+double point::get_y() const { return y; }
+double point::get_r() const { return r; }
 
 string point::print() {
 	stringstream ss;
