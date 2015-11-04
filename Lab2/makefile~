@@ -4,8 +4,8 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-lab2 : $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) -o lab2
+p1 : $(OBJS)
+	$(CC) $(LFLAGS) $(OBJS) -o p1
 
 source.o : source.cpp point.hpp tri.hpp
 	$(CC) $(CFLAGS) source.cpp
