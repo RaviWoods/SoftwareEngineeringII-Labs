@@ -25,6 +25,7 @@ bool operator==(const point& p1, const point& p2) {
 
 ostream& operator<<(ostream& os, const point& pt)
 {
+
 	os << "(" << pt.get_x() << "," << pt.get_y() << ")";
 	return os;
 }

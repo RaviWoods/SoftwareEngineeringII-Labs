@@ -18,13 +18,18 @@ int main() {
 	}
 	point temp;
 	vector<point> v1;
+	int a = 0;
 	while(infile >> temp) {
+		a++;
 		v1.push_back(temp);
 	} 
+	//
+	cout << "a = " << a << endl;
 	for(int i = 0; i < v1.size() ; i++) {
 		cout << v1[i] << endl;
 	}
 
 }
+
 
 

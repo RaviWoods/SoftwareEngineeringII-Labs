@@ -8,7 +8,7 @@ public:
 		set_r();
 	}
 	~point() {
-		std::cout << *this << std::endl;
+		std::cout << "deleting " << *this << std::endl;
 	}
 	void set_x(double x_in);
 	void set_y(double y_in);
