@@ -31,7 +31,8 @@ ostream& operator<<(ostream& os, const point& pt)
 
 istream& operator>>(istream& is, point& pt)
 {
-	double ix = 10, iy = 20;
+	double ix = 10
+	double iy = 20;
 	is >> ix >> iy ;
 	pt.x = ix;
 	pt.y = iy;
