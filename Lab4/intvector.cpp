@@ -17,7 +17,44 @@ intvector::~intvector() {
 	delete[] v;
 }
 
+intvector::intvector(const intvector &vin) {
+	//cout << "Copy constructor" << endl;
+	//delete[] v;
+	v = new int[vin.size()];
+	this->d_size = vin.size();
+	this->d_capacity = vin.capacity();
+	for(int i = 0; i < this->d_size; i++) {
+			v[i] = vin.at(i);
+	}
 
+}
+
+int intvector::operator[](const int index) {
+	return v[index];
+}
+
+int intvector::find(const int value) {
+	for(int i = 0; i < d_size; i++) {
+		if (v[i] == value) {
+			return i;
+		}
+	}
+	return -2;
+}
+void intvector::operator=(const intvector &vin) {
+	
+	if(&vin != this) {
+		cout << "Assignment operator" << endl;
+		delete[] v;
+		v = new int[vin.size()];
+		this->d_size = vin.size();
+		this->d_capacity = vin.capacity();
+		for(int i = 0; i < this->d_size; i++) {
+				v[i] = vin.at(i);
+		}
+	}
+
+}
 intvector::intvector(int size) {
 	
 	d_size = 0;

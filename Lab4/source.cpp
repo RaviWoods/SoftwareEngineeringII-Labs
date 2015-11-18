@@ -30,16 +30,17 @@ int main() {
 	}
 	*/
 
-	int nums[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};	
+	int nums[] = {3,1,4,1,2,3,4,5,3,2,4,5,3,2,4,4,3,4,3,3,2};	
 	intvector ravi = intvector(10, nums);
 
 	for (int i = 0; i < 100; i++) {
 		ravi.push_back(i);
 	}
-
-	for (int i = 0; i < ravi.size(); i++) {
-		cout << ravi.at(i) << endl;
+	intvector alkesh = ravi;
+	for (int i = 0; i < alkesh.size(); i++) {
+		cout << alkesh[i] << endl;
 	}
+	cout << "Find = " << alkesh.find(99) << endl;
 }
 
 
