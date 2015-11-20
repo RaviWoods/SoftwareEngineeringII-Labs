@@ -3,6 +3,7 @@
 
 #include "../libs.h"
 #include "counter.hpp"
+#include "modulocounter.hpp"
 
 class Stopwatch {
 	public:
@@ -12,8 +13,8 @@ class Stopwatch {
 		friend std::ostream& operator<<(std::ostream& os, const Stopwatch& sw);
 	private:
 		Counter hours;
-		Counter minutes;
-		Counter seconds;
+		ModuloCounter minutes;
+		ModuloCounter seconds;
 		
 };
 #endif

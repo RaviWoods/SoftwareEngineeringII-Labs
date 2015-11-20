@@ -5,7 +5,7 @@ using namespace std;
 
 
 int main() {
-	Stopwatch mywatch = Stopwatch();
+	Stopwatch mywatch;
 	Counter mycounter();
 	for (int i = 0; i <= 3600; i++) {
 		cout << mywatch << endl;

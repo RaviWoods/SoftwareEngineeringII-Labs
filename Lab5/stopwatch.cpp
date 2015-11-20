@@ -1,11 +1,10 @@
 #include "../libs.h"
 #include "stopwatch.hpp"
+#include "modulocounter.hpp"
 #include "counter.hpp"
 using namespace std;
 
-Stopwatch::Stopwatch() {
-	this->reset();
-}
+Stopwatch::Stopwatch() : seconds(60), minutes(60) {};
 
 void Stopwatch::reset() {
 	hours.reset();
@@ -14,14 +13,10 @@ void Stopwatch::reset() {
 }
 
 void Stopwatch::tick() {
-	seconds.increment();
-	if (seconds.get_count() >= 60) {
-		minutes.increment();
-		seconds.reset();
-	} 
-	if(minutes.get_count() >= 60) {
-		hours.increment();
-		minutes.reset();
+	if(seconds.increment()) {
+		if(minutes.increment()) {
+			hours.increment();
+		}
 	}
 }
 
