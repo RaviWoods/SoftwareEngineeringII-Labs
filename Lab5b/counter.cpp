@@ -20,6 +20,12 @@ void Counter::increment() {
 int Counter::get_count() const {
 	return count;
 }
+
+ostream& operator<<(ostream& os, const Counter& ctr) {
+	os << ctr.count;
+	return os;
+}
+
 /*
 Header for reference
 

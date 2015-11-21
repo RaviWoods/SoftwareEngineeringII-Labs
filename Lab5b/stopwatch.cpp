@@ -21,7 +21,7 @@ void Stopwatch::tick() {
 }
 
 ostream& operator<<(ostream& os, const Stopwatch& sw) {	
-		os << sw.hours.get_count() << ":" << setfill('0') << setw(2) <<  sw.minutes.get_count() << ":" << setfill('0') << setw(2) <<  sw.seconds.get_count() << endl;
+		os << sw.hours << ":" << setfill('0') << setw(2) <<  sw.minutes << ":" << setfill('0') << setw(2) <<  sw.seconds;
 		return os;
 }
 

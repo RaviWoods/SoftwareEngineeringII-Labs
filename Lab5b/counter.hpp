@@ -9,6 +9,7 @@ class Counter {
 		void increment();
 		void reset();
 		int get_count() const;
+		friend std::ostream& operator<<(std::ostream& os, const Counter& ctr);
 	private:
 		int count;
 };
