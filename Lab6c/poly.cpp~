@@ -1,0 +1,10 @@
+#include "../libs.h"
+#include "poly.hpp"
+
+using namespace std;
+
+ostream& operator<<(ostream& os, const Polygon& poly) {
+	stringstream ss;
+	ss << poly.strmake();
+	return ss.str();
+}

@@ -7,11 +7,9 @@ public:
 	point(double x_in, double y_in) : x(x_in), y(y_in) {
 		set_r();
 	}
-	/*
 	~point() {
 		std::cout << "deleting " << *this << std::endl;
 	}
-	*/
 	void set_x(double x_in);
 	void set_y(double y_in);
 	void set_r();
