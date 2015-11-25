@@ -23,6 +23,7 @@ string ModuloCounter::str(bool mod) const {
 	} else {
 		ss << Counter::str();
 	}
+	}
 	return ss.str();
 	
 }

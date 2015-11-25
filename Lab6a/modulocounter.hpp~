@@ -7,7 +7,7 @@ class ModuloCounter : public Counter {
 	public:
 		ModuloCounter(int m = 0);
 		bool increment();
-		std::string str(bool mod = false) const;
+		std::string str() const;
 	private: 
 		int modulo;
 };
