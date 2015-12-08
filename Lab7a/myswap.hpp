@@ -3,11 +3,8 @@
 #include "../libs.h"
 
 template <class Type>
-void myswap(Type& a, Type& b) {
-	Type c;
-	c = a; 
-	a = b;
-	b = c;
+void myswap(Type& a, Type& b, Type& c) {
+	a = b + c;
 }
 
 class MyClass {

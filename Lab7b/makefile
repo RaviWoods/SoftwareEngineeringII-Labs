@@ -5,13 +5,13 @@ DEBUG = -g
 CFLAGS = -Wall -c $(DEBUG)
 LFLAGS = -Wall $(DEBUG)
 
-$(LABN) : $(OBJS)
+lab : $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) -o $(LABN)
 
 clean:
 	@rm -f $(OBJS) $(LABN)
 
-source.o : source.cpp myswap.hpp
+source.o : source.cpp ../libs.h
 	$(CC) $(CFLAGS) source.cpp
 
 
