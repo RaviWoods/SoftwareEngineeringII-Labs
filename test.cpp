@@ -1,5 +1,5 @@
 #include <iostream>
-
+//ijwgojnbsogjojg
 class B {
 	protected:
 		B(){}
